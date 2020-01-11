@@ -1,2 +1,2 @@
 # verbose-carnival
-messing around with create a website using React and Material-UI
+messing around with building a website using React and Material-UI
