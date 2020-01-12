@@ -2,6 +2,8 @@ import React from 'react'
 import { makeStyles, Grid, CssBaseline, Typography, Link, Button} from '@material-ui/core'
 import full from '../images/full.jpg'
 import meow from '../images/meowmeow.jpg'
+import minitt from '../images/minitt.jpg'
+import rocky from '../images/rocky.jpg'
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -77,7 +79,7 @@ function Home(){
                         </Button>
                     </Grid>
                     <Grid item xs={6}>
-                        <img src={full} alt="me" className={classes.img}></img>
+                        <img src={rocky} alt="me" className={classes.img}></img>
                     </Grid>
             </Grid>
             <Grid container direction="row-reverse" justify="flex-start" alignItems="center" className={classes.sectionOdd}>
@@ -89,7 +91,7 @@ function Home(){
                     </Button>
                 </Grid>
                 <Grid item xs={6}>
-                    <img src={meow} alt="me" className={classes.img}></img>
+                    <img src={minitt} alt="me" className={classes.img}></img>
                 </Grid>
             </Grid>
             <Grid container direction="row" justify="center" alignItems="center" spacing={4} className={classes.foot}>
