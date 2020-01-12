@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types';
 import { Link as RouterLink } from 'react-router-dom';
 import { List, ListItem, CssBaseline, ListItemText, Drawer, makeStyles, Avatar, Divider, Typography } from '@material-ui/core';
+import me from './images/avatar.jpg'
 
 ListItemLink.propTypes = {
     primary: PropTypes.string.isRequired,
@@ -23,8 +24,6 @@ const useStyles = makeStyles(theme => ({
   },
   content: {
     flexGrow: 1,
-    backgroundColor: theme.palette.background.default,
-    padding: theme.spacing(3),
   },
   size: {
     width: theme.spacing(12),
@@ -44,6 +43,7 @@ const useStyles = makeStyles(theme => ({
 function ListItemLink(props) {
     const { primary, to } = props;
     const classes = useStyles();
+    
     const renderLink = React.useMemo(
         () => React.forwardRef((itemProps, ref) => <RouterLink to={to} ref={ref} {...itemProps} />),
         [to],
@@ -82,7 +82,7 @@ function Layout(props){
                 anchor="left"
             >   
                 <div className={classes.drawerHeader}>
-                    <Avatar alt="Lucas Guzmán-Finn" src={require("./images/avatar.jpg")} className={classes.size} />
+                    <Avatar alt="Lucas Guzmán-Finn" src={me} className={classes.size} />
                     <div className={classes.drawerHeaderText}>
                         <Typography variant="h6">Lucas Guzmán-Finn</Typography>
                         <Typography variant="subtitle1">lguzmanfinn@gmail.com</Typography>
@@ -92,6 +92,7 @@ function Layout(props){
                 <List>
                     <ListItemLink to="/" primary="Home" />
                     <ListItemLink to="/college" primary="College" />
+                    <ListItemLink to="/experience" primary="Experience" />
                     <Divider/>
                     <ListItemLink to="/projects" primary="Projects" />
                         <ListItemLink to="/projects/scuba" primary="Scuba" />
@@ -100,9 +101,7 @@ function Layout(props){
                         <ListItemLink to="/projects/verbose-carnival" primary="Verbose-Carnival" />
                 </List>
             </Drawer>
-            <main className={classes.content}>
-                {props.children}
-            </main>
+            {props.children}
         </div>
     )
 }

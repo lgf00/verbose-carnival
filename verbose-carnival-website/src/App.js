@@ -8,6 +8,7 @@ import Schedular from './pages/Projects/Schedular';
 import Scuba from './pages/Projects/Scuba';
 import Travel from './pages/Projects/Travel';
 import VerboseCarnival from './pages/Projects/Verbose-Carnival';
+import Experience from './pages/Experience';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route exact path="/" component = { Home } />
         <Route exact path="/projects" component = { Projects } />
         <Route exact path="/college" component = { College } />
+        <Route exact path="/experience" component = { Experience } />
         <Route exact path="/projects/schedular" component = { Schedular } />
         <Route exact path="/projects/scuba" component = { Scuba } />
         <Route exact path="/projects/travel" component = { Travel } />
