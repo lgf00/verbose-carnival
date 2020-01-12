@@ -1,15 +1,25 @@
 import React from 'react';
 import { Route } from 'react-router-dom'
-import Home from './home';
-import Nav from "./nav"
-
+import Home from './pages/Home';
+import Layout from "./Layout"
+import Projects from './pages/Projects';
+import College from './pages/College';
+import Schedular from './pages/Projects/Schedular';
+import Scuba from './pages/Projects/Scuba';
+import Travel from './pages/Projects/Travel';
+import VerboseCarnival from './pages/Projects/Verbose-Carnival';
 
 function App() {
   return (
-    <div className="App">
-      <Nav/>
-      <Route exact path="/" component = { Home } />
-    </div>
+    <Layout>
+        <Route exact path="/" component = { Home } />
+        <Route exact path="/projects" component = { Projects } />
+        <Route exact path="/college" component = { College } />
+        <Route exact path="/projects/schedular" component = { Schedular } />
+        <Route exact path="/projects/scuba" component = { Scuba } />
+        <Route exact path="/projects/travel" component = { Travel } />
+        <Route exact path="/projects/verbose-carnival" component = { VerboseCarnival } />
+    </Layout>
   );
 }
 
