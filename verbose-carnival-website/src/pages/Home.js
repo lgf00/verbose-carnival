@@ -44,9 +44,6 @@ function Project(props) {
 }
 
 const useStyles = makeStyles(theme => ({
-    root: {
-        flexGrow: 1,
-    },
     sectionEven: {
         padding: theme.spacing(5),
         background: theme.palette.background.paper,
@@ -121,7 +118,7 @@ function Home() {
     const classes = useStyles();
 
     return (
-        <main className={classes.root}>
+        <div>
             <CssBaseline />
             <Grid container alignItems="center" spacing={1} className={classes.sectionEven}>
                 <Grid item xs={12} lg={6}>
@@ -195,7 +192,7 @@ function Home() {
                         </Tooltip>
                     </CardContent>
                 </Grid>
-                <Grid item component={Card} className={classes.card} xs={12}  lg={5}>
+                <Grid item component={Card} className={classes.card} xs={12} lg={5}>
                     <CardContent>
                         <Typography variant="h6" className={classes.subsubTitle}> <strong>RaizLabs, Boston MA</strong> </Typography>
                         <Typography variant="body1" className={classes.desc}> - <strong>Project Manager Assistant</strong>: Learned how to manage agile software development. Wrote user stories based off
@@ -220,13 +217,13 @@ function Home() {
             <Grid container justify="center" className={classes.sectionOdd}>
                 <Grid item xs={12}>
                     <Typography variant="h2" className={classes.subTitle}>Projects</Typography>
-                    <Typography variant="h5" className={classes.subText}>some personal projects that have been worked on and off on spare time, some 
+                    <Typography variant="h5" className={classes.subText}>some personal projects that have been worked on and off on spare time, some
                     bassed off of what I am passionate about, others for convenience</Typography>
                 </Grid>
-                <Project title="Scuba" img={full} content="Online log book to help me track my dives" moreLink="/projects/scuba" liveLink="/live" codeLink="code"/>
-                <Project title="Travel" img={meow} content="App to keep track of the places I've been and the photos I've taken" moreLink="/projects/travel" liveLink="/live" codeLink="code"/>
-                <Project title="Schedular" img={minitt} content="Easy and customizable way for me to add my school schedule to my google calandar" moreLink="/projects/schedular" liveLink="/live" codeLink="code"/>
-                <Project title="Website" img={minitt} content="This... right here.. what you're looking at!" moreLink="/projects/verbose-carnival" liveLink="/live" codeLink="code"/>
+                <Project title="Scuba" img={full} content="Online log book to help me track my dives" moreLink="/projects/scuba" liveLink="/live" codeLink="code" />
+                <Project title="Travel" img={meow} content="App to keep track of the places I've been and the photos I've taken" moreLink="/projects/travel" liveLink="/live" codeLink="code" />
+                <Project title="Schedular" img={minitt} content="Easy and customizable way for me to add my school schedule to my google calandar" moreLink="/projects/schedular" liveLink="/live" codeLink="code" />
+                <Project title="Website" img={minitt} content="This... right here.. what you're looking at!" moreLink="/projects/verbose-carnival" liveLink="/live" codeLink="code" />
             </Grid>
             <Grid container direction="row" justify="center" alignItems="center" spacing={4} className={classes.foot}>
                 <Grid item xs={12}>
@@ -253,7 +250,7 @@ function Home() {
                     </Link>
                 </Grid>
             </Grid>
-        </main>
+        </div>
     );
 }
 

@@ -50,6 +50,7 @@ const useStyles = makeStyles(theme => ({
   },
   content: {
     flexGrow: 1,
+    backgroundColor: theme.palette.primary.main,
   },
 }));
 

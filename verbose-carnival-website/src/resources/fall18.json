@@ -1,0 +1,37 @@
+[
+    {
+        "Class": "CICS 191",
+        "Grade": "A",
+        "Credits": 1.00,
+        "Full": "Ethics in AI",
+        "Desc": "Seminar on the topic of the ethics behind AI. Weekly discussions."
+    },
+    {
+        "Class": "COMPSCI 187",
+        "Grade": "B+",
+        "Credits": 4.00,
+        "Full": "Programming with Data Structures",
+        "Desc": "TBA"
+    },
+    {
+        "Class": "HONORS ENGLWRIT 112",
+        "Grade": "A",
+        "Credits": 3.00,
+        "Full": "College Writing",
+        "Desc": "TBA"
+    },
+    {
+        "Class": "KOREAN 115",
+        "Grade": "A",
+        "Credits": 4.00,
+        "Full": "Beginning Korean I",
+        "Desc": "TBA"
+    },
+    {
+        "Class": "MATH",
+        "Grade": "A-",
+        "Credits": 4.00,
+        "Full": "Honors Calculus II",
+        "Desc": "TBA"
+    }
+]

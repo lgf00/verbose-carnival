@@ -1,0 +1,37 @@
+[
+    {
+        "Class": "COMPSCI 230",
+        "Grade": "B+",
+        "Credits": 4.00,
+        "Full": "Computer Systems Principles",
+        "Desc": "TBA"
+    },
+    {
+        "Class": "COMPSCI 240",
+        "Grade": "B-",
+        "Credits": 4.00,
+        "Full": "Reasoning Under Uncertainty",
+        "Desc": "TBA"
+    },
+    {
+        "Class": "HONORS 201H",
+        "Grade": "A",
+        "Credits": 4.00,
+        "Full": "Ideas That Change the World",
+        "Desc": "TBA"
+    },
+    {
+        "Class": "MATH 233",
+        "Grade": "A-",
+        "Credits": 3.00,
+        "Full": "Multivariate Calculus",
+        "Desc": "TBA"
+    },
+    {
+        "Class": "SPANISH 120",
+        "Grade": "A",
+        "Credits": 3.00,
+        "Full": "Spanish II",
+        "Desc": "TBA"
+    }
+]

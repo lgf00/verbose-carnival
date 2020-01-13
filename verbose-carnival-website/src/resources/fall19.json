@@ -1,0 +1,37 @@
+[
+    {
+        "Class": "CICS 256",
+        "Grade": "A-",
+        "Credits": 4.00,
+        "Full": "Make: Physical Computing",
+        "Desc": "TBA"
+    },
+    {
+        "Class": "COMPSCI 220",
+        "Grade": "A",
+        "Credits": 4.00,
+        "Full": "Programming Methodology",
+        "Desc": "TBA"
+    },
+    {
+        "Class": "COMPSCI 250",
+        "Grade": "B+",
+        "Credits": 4.00,
+        "Full": "Introduction to Computation",
+        "Desc": "TBA"
+    },
+    {
+        "Class": "NRC 120",
+        "Grade": "A",
+        "Credits": 2.00,
+        "Full": "Basic Scuba",
+        "Desc": "TBA"
+    },
+    {
+        "Class": "POLISCI 101",
+        "Grade": "B+",
+        "Credits": 4.00,
+        "Full": "American Politics",
+        "Desc": "TBA"
+    }
+]

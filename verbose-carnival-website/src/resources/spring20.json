@@ -1,0 +1,44 @@
+[
+    {
+        "Class": "COMPSCI 311",
+        "Grade": "-",
+        "Credits": 4.00,
+        "Full": "Introduction to Algorithms",
+        "Desc": "TBA"
+    },
+    {
+        "Class": "HONORS 391-AH",
+        "Grade": "-",
+        "Credits": 1.00,
+        "Full": "New England Town Planning",
+        "Desc": "TBA"
+    },
+    {
+        "Class": "MATH 235",
+        "Grade": "-",
+        "Credits": 3.00,
+        "Full": "Linear Algebra",
+        "Desc": "TBA"
+    },
+    {
+        "Class": "MICROBIO 140P",
+        "Grade": "-",
+        "Credits": 4.00,
+        "Full": "Plagues: The Ecology of Disease",
+        "Desc": "TBA"
+    },
+    {
+        "Class": "NRC 121",
+        "Grade": "-",
+        "Credits": 1.00,
+        "Full": "Advanced Scuba - Warm Water",
+        "Desc": "TBA"
+    },
+    {
+        "Class": "PHYSICS 151",
+        "Grade": "-",
+        "Credits": 4.00,
+        "Full": "General Physics I",
+        "Desc": "TBA"
+    }
+]
