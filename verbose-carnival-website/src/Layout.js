@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types';
 import { Link as RouterLink } from 'react-router-dom';
-import { List, ListItem, CssBaseline, ListItemText, Drawer, makeStyles, Avatar, Divider, Typography } from '@material-ui/core';
+import { List, ListItem, CssBaseline, ListItemText, Drawer, makeStyles, Avatar, Divider, Typography, ListSubheader } from '@material-ui/core';
 import me from './images/avatar.jpg'
 
 ListItemLink.propTypes = {
@@ -42,22 +42,12 @@ const useStyles = makeStyles(theme => ({
 
 function ListItemLink(props) {
     const { primary, to } = props;
-    const classes = useStyles();
     
     const renderLink = React.useMemo(
         () => React.forwardRef((itemProps, ref) => <RouterLink to={to} ref={ref} {...itemProps} />),
         [to],
     );
     
-    if (primary === 'Scuba' || primary === 'Travel' || primary === 'Schedular' || primary === 'Verbose-Carnival') {
-        return (
-            <li>
-                <ListItem button component={renderLink} className={classes.fakeNested}>
-                    <ListItemText primary={primary} />
-                </ListItem>
-            </li>
-        )
-    }
     return (
         <li>
             <ListItem button component={renderLink} >
@@ -92,13 +82,12 @@ function Layout(props){
                 <List>
                     <ListItemLink to="/" primary="Home" />
                     <ListItemLink to="/college" primary="College" />
-                    <ListItemLink to="/experience" primary="Experience" />
                     <Divider/>
-                    <ListItemLink to="/projects" primary="Projects" />
-                        <ListItemLink to="/projects/scuba" primary="Scuba" />
-                        <ListItemLink to="/projects/travel" primary="Travel" />
-                        <ListItemLink to="/projects/schedular" primary="Schedular" />
-                        <ListItemLink to="/projects/verbose-carnival" primary="Verbose-Carnival" />
+                    <ListSubheader>Projects</ListSubheader>
+                    <ListItemLink to="/projects/scuba" primary="Scuba" />
+                    <ListItemLink to="/projects/travel" primary="Travel" />
+                    <ListItemLink to="/projects/schedular" primary="Schedular" />
+                    <ListItemLink to="/projects/verbose-carnival" primary="Verbose-Carnival" />
                 </List>
             </Drawer>
             {props.children}
