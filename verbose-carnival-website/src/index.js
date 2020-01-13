@@ -3,11 +3,21 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from 'react-router-dom';
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core'
+
+const theme = createMuiTheme({
+    palette: {
+        primary: { main: '#ffffff' },
+        secondary: { main: '#00E5FF' },
+    },
+});
 
 ReactDOM.render(
-    <BrowserRouter>
-        <App />
-    </BrowserRouter>,
+    <MuiThemeProvider theme={theme}>
+        <BrowserRouter>
+            <App />
+        </BrowserRouter>
+    </MuiThemeProvider>,
     document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change

@@ -69,6 +69,12 @@ const useStyles = makeStyles(theme => ({
         height: "100%",
         width: "100%",
         padding: theme.spacing(15),
+        [theme.breakpoints.down('md')]: {
+            padding: theme.spacing(15),
+        },
+        [theme.breakpoints.down('xs')]: {
+            padding: theme.spacing(1),
+        },
     },
     a: {
         textDecoration: "none",
@@ -89,7 +95,6 @@ const useStyles = makeStyles(theme => ({
     },
     card: {
         margin: theme.spacing(2),
-        //padding: theme.spacing(1),
     },
     projCard: {
         display: "flex",
@@ -97,7 +102,6 @@ const useStyles = makeStyles(theme => ({
         height: "auto",
         margin: 16,
     },
-    
     projCardContent: {
         display: "flex",
         flex: "1 0 auto",
@@ -123,9 +127,9 @@ function Home() {
                 <Grid item xs={12} lg={6}>
                     <Typography variant="h2">Lucas Guzmán-Finn</Typography>
                     <Typography variant="h5" className={classes.subText}>an honors student majoring in computer science with experience in coding, quality assurance, and the software development processes looking for opportunities to apply my skills and become more knowledgeable in the field. </Typography>
-                    <Button size="large"color="secondary" target="_blank" href={resume} className={classes.button}>
+                    <Button size="large" color="secondary" target="_blank" href={resume} className={classes.button}>
                         view resume
-                        </Button>
+                    </Button>
                 </Grid>
                 <Grid item xs={12} lg={6}>
                     <img src={full} alt="me" className={classes.img}></img>
@@ -228,22 +232,22 @@ function Home() {
                 <Grid item xs={12}>
                     <Typography variant="h5"> Feel free to check me out on any of the platforms below!</Typography>
                 </Grid>
-                <Grid item xs={2}>
+                <Grid item md={2}>
                     <Link href="https://www.linkedin.com/in/lucasguzmanfinn/" target="_blank" rel="noopener noreferrer" color="inherit">
                         <Typography variant="h6"> LinkedIn </Typography>
                     </Link>
                 </Grid>
-                <Grid item xs={2}>
+                <Grid item md={2}>
                     <Link href="https://www.instagram.com/lggufi_/" target="_blank" rel="noopener noreferrer" color="inherit">
                         <Typography variant="h6"> Instagram </Typography>
                     </Link>
                 </Grid>
-                <Grid item xs={2}>
+                <Grid item md={2}>
                     <Link href="https://www.facebook.com/profile.php?id=100004435065799" target="_blank" rel="noopener noreferrer" color="inherit">
                         <Typography variant="h6"> Facebook </Typography>
                     </Link>
                 </Grid>
-                <Grid item xs={2}>
+                <Grid item md={2}>
                     <Link href="https://github.com/lgf00" target="_blank" rel="noopener noreferrer" color="inherit">
                         <Typography variant="h6"> GitHub </Typography>
                     </Link>
