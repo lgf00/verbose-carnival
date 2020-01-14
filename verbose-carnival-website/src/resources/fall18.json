@@ -1,37 +1,32 @@
 [
     {
-        "Class": "CICS 191",
-        "Grade": "A",
-        "Credits": 1.00,
-        "Full": "Ethics in AI",
+        "Class": "Ethics of AI",
+        "Requirement": "Computer Science",
+        "Full": "CICS 191: Ethics of AI",
         "Desc": "Seminar on the topic of the ethics behind AI. Weekly discussions."
     },
     {
-        "Class": "COMPSCI 187",
-        "Grade": "B+",
-        "Credits": 4.00,
-        "Full": "Programming with Data Structures",
+        "Class": "Programming with Data Structures",
+        "Requirement": "Computer Science",
+        "Full": "COMPSCI 187: Programming with Data Structures",
         "Desc": "TBA"
     },
     {
-        "Class": "HONORS ENGLWRIT 112",
-        "Grade": "A",
-        "Credits": 3.00,
-        "Full": "College Writing",
+        "Class": "College Writing",
+        "Requirement": "Honors, College Writing (CW)",
+        "Full": "HONORS ENGLWRIT 112H: College Writing",
         "Desc": "TBA"
     },
     {
-        "Class": "KOREAN 115",
-        "Grade": "A",
-        "Credits": 4.00,
-        "Full": "Beginning Korean I",
+        "Class": "Beginning Korean I",
+        "Requirement": "-",
+        "Full": "KOREAN 115: Beginning Korean I",
         "Desc": "TBA"
     },
     {
-        "Class": "MATH",
-        "Grade": "A-",
-        "Credits": 4.00,
-        "Full": "Honors Calculus II",
+        "Class": "Calculus II (HONORS)",
+        "Requirement": "Computer Science, CS: Math Req",
+        "Full": "MATH 131: Honors Calculus II",
         "Desc": "TBA"
     }
 ]

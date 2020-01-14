@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types';
 import { Link as RouterLink } from 'react-router-dom';
-import { List, ListItem, CssBaseline, ListItemText, Drawer, makeStyles, Avatar, Divider, Typography, ListSubheader, Hidden, Toolbar, AppBar, IconButton } from '@material-ui/core';
+import { List, ListItem, CssBaseline, ListItemText, Drawer, makeStyles, Avatar, Divider, Typography, ListSubheader, Hidden, Toolbar, AppBar, IconButton, Slide, useScrollTrigger } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu'
 import me from './images/avatar.jpg'
 
@@ -13,55 +13,58 @@ ListItemLink.propTypes = {
 const drawerWidth = 240;
 
 const useStyles = makeStyles(theme => ({
-  root: {
-    display: 'flex',
-  },
-  size: {
-    width: theme.spacing(12),
-    height: theme.spacing(12),
-  },
-  drawerHeader: {
-    padding: theme.spacing(3),
-  },
-  drawerHeaderText: {
-      paddingTop: theme.spacing(1),
-  },
-  drawer: {
-    [theme.breakpoints.up('md')]: {
-      width: drawerWidth,
-      flexShrink: 0,
+    root: {
+        display: 'flex',
     },
-  },
-  appBar: {
-    [theme.breakpoints.up('md')]: {
-      width: `calc(100% - ${drawerWidth}px)`,
-      marginLeft: drawerWidth,
+    size: {
+        width: theme.spacing(12),
+        height: theme.spacing(12),
     },
-  },
-  menuButton: {
-    marginRight: theme.spacing(2),
-    [theme.breakpoints.up('md')]: {
-      display: 'none',
+    drawerHeader: {
+        padding: theme.spacing(3),
     },
-  },
-  toolbar: theme.mixins.toolbar,
-  drawerPaper: {
-    width: drawerWidth,
-  },
-  content: {
-    flexGrow: 1,
-    backgroundColor: theme.palette.primary.main,
-  },
+    drawerHeaderText: {
+        paddingTop: theme.spacing(1),
+    },
+    drawer: {
+        [theme.breakpoints.up('md')]: {
+            width: drawerWidth,
+            flexShrink: 0,
+        },
+    },
+    appBar: {
+        [theme.breakpoints.up('md')]: {
+            width: `calc(100% - ${drawerWidth}px)`,
+            marginLeft: drawerWidth,
+        },
+    },
+    menuButton: {
+        marginRight: theme.spacing(2),
+        [theme.breakpoints.up('md')]: {
+            display: 'none',
+        },
+    },
+    toolbar: theme.mixins.toolbar,
+    drawerPaper: {
+        width: drawerWidth,
+    },
+    content: {
+        flexGrow: 1,
+        backgroundColor: theme.palette.primary.main,
+    },
+    title: {
+        size: "100%",
+    }
 }));
 
 function ListItemLink(props) {
     const { primary, to } = props;
-    
+
     const renderLink = React.useMemo(
         () => React.forwardRef((itemProps, ref) => <RouterLink to={to} ref={ref} {...itemProps} />),
         [to],
     );
-    
+
     return (
         <li>
             <ListItem button component={renderLink} >
@@ -71,14 +74,41 @@ function ListItemLink(props) {
     );
 }
 
-function Layout(props){
+HideOnScroll.propTypes = {
+    children: PropTypes.element.isRequired,
+};
+
+function HideOnScroll(props) {
+    const { children } = props;
+    const trigger = useScrollTrigger();
+    return (
+        <Slide appear={false} direction="down" in={!trigger}>
+            {children}
+        </Slide>
+    );
+}
+
+function getPageName() {
+    let path = window.location.pathname;
+    switch (path) {
+        case "/":
+            return "Home";
+        case "/college":
+            return "College";
+        default:
+            return "unknown page name";
+    };
+}
+
+function Layout(props) {
     const classes = useStyles();
+    const { children } = props
     const [mobileOpen, setMobileOpen] = React.useState(false);
 
     const handleDrawerToggle = () => {
-      setMobileOpen(!mobileOpen);
+        setMobileOpen(!mobileOpen);
     };
-
+    
     const drawer = (
         <div>
             <div className={classes.drawerHeader}>
@@ -101,35 +131,39 @@ function Layout(props){
             </List>
         </div>
     );
+
     return (
         <div className={classes.root}>
             <CssBaseline />
             <Hidden mdUp>
-                <AppBar position="fixed" elevation={0} className={classes.appBar}>
-                    <Toolbar>
-                        <IconButton
-                            color="inherit"
-                            aria-label="open drawer"
-                            edge="start"
-                            onClick={handleDrawerToggle}
-                            className={classes.menuButton}
-                        >
-                            <MenuIcon />
-                        </IconButton>
-                    </Toolbar>
-                </AppBar>
+                <HideOnScroll>
+                    <AppBar position="fixed" className={classes.appBar}>
+                        <Toolbar>
+                            <IconButton
+                                color="inherit"
+                                aria-label="open drawer"
+                                edge="start"
+                                onClick={handleDrawerToggle}
+                                className={classes.menuButton}
+                            >
+                                <MenuIcon />
+                            </IconButton>
+                            <Typography variant="h5" className={classes.title}>{getPageName()}</Typography>
+                        </Toolbar>
+                    </AppBar>
+                </HideOnScroll>
                 <nav className={classes.drawer} aria-label="mailbox folders">
                     <Drawer
-                        //container={container}
                         variant="temporary"
                         anchor='left'
                         open={mobileOpen}
                         onClose={handleDrawerToggle}
+                        onClick={handleDrawerToggle}
                         classes={{
                             paper: classes.drawerPaper,
                         }}
                         ModalProps={{
-                            keepMounted: true, // Better open performance on mobile.
+                            keepMounted: true,
                         }}
                     >
                         {drawer}
@@ -151,66 +185,10 @@ function Layout(props){
             </nav>
             <main className={classes.content}>
                 <Hidden mdUp><div className={classes.toolbar} /></Hidden>
-                {props.children}
+                {children}
             </main>
         </div>
-      );
-    // return(
-    //     <div className={classes.root}>
-    //         <CssBaseline/>
-    //         <Hidden xsDown component="js">
-    //             <nav className={classes.drawer} aria-label="navigation">
-    //                 <Drawer
-    //                     className={classes.drawer}
-    //                     variant="permanent"
-    //                     classes={{
-    //                         paper: classes.drawerPaper,
-    //                     }}
-    //                     anchor="left"
-    //                 >   
-    //                     {drawer}
-    //                 </Drawer>
-    //             </nav>
-    //         </Hidden>
-    //         <Hidden smUp>
-    //             <AppBar position="fixed" className={classes.appBar}>
-    //                 <Toolbar>
-    //                     <IconButton
-    //                         color="inherit"
-    //                         aria-label="open drawer"
-    //                         edge="start"
-    //                         onClick={handleDrawerToggle}
-    //                         className={classes.menuButton}
-    //                     >
-    //                         <MenuIcon />
-    //                     </IconButton>
-    //                     <Typography variant="h6" noWrap>
-    //                         App Bar
-    //                     </Typography>
-    //                 </Toolbar>
-    //             </AppBar>
-    //             <nav className={classes.drawer} aria-label="navigation">
-    //                 <Drawer
-    //                     variant="temporary"
-    //                     anchor={theme.direction === 'rtl' ? 'right' : 'left'}
-    //                     open={mobileOpen}
-    //                     onClose={handleDrawerToggle}
-    //                     classes={{
-    //                         paper: classes.drawerPaper,
-    //                     }}
-    //                     ModalProps={{
-    //                         keepMounted: true,
-    //                     }}
-    //                 >
-    //                     {drawer}
-    //                 </Drawer>
-    //             </nav>
-    //         </Hidden>
-    //         <main className={classes.content}>
-    //             {props.children}
-    //         </main>
-    //     </div>
-    // );
+    );
 }
 
 export default Layout;

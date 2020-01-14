@@ -1,44 +1,38 @@
 [
     {
-        "Class": "COMPSCI 311",
-        "Grade": "-",
-        "Credits": 4.00,
-        "Full": "Introduction to Algorithms",
+        "Class": "Introduction to Algorithms",
+        "Requirement": "Computer Science",
+        "Full": "COMPSCI 311: Introduction to Algorithms",
         "Desc": "TBA"
     },
     {
-        "Class": "HONORS 391-AH",
-        "Grade": "-",
-        "Credits": 1.00,
-        "Full": "New England Town Planning",
+        "Class": "New England Town Planning",
+        "Requirement": "Honors",
+        "Full": "HONORS 391-AH: New England Town Planning",
         "Desc": "TBA"
     },
     {
-        "Class": "MATH 235",
-        "Grade": "-",
-        "Credits": 3.00,
-        "Full": "Linear Algebra",
+        "Class": "Linear Algebra",
+        "Requirement": "CS: Math",
+        "Full": "MATH 235: Linear Algebra",
         "Desc": "TBA"
     },
     {
-        "Class": "MICROBIO 140P",
-        "Grade": "-",
-        "Credits": 4.00,
-        "Full": "Plagues: The Ecology of Disease",
+        "Class": "Plagues: The Ecology of Disease",
+        "Requirement": "Biological Science (BS)",
+        "Full": "MICROBIO 140P: Plagues: The Ecology of Disease",
         "Desc": "TBA"
     },
     {
-        "Class": "NRC 121",
-        "Grade": "-",
-        "Credits": 1.00,
-        "Full": "Advanced Scuba - Warm Water",
+        "Class": "Advanced Scuba - Warm Water",
+        "Requirement": "-",
+        "Full": "NRC 121: Advanced Scuba - Warm Water",
         "Desc": "TBA"
     },
     {
-        "Class": "PHYSICS 151",
-        "Grade": "-",
-        "Credits": 4.00,
-        "Full": "General Physics I",
+        "Class": "General Physics I",
+        "Requirement": "Physical Science (PS), CS: Lab Science",
+        "Full": "PHYSICS 151: General Physics I",
         "Desc": "TBA"
     }
 ]

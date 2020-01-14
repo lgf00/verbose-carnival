@@ -76,7 +76,6 @@ function MakeTable(props) {
         let keys = getKeys();
         keys.shift();
         keys.shift();
-        keys.shift();
         return keys;
     }
 

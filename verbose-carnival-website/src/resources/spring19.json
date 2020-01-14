@@ -1,37 +1,32 @@
 [
     {
-        "Class": "COMPSCI 230",
-        "Grade": "B+",
-        "Credits": 4.00,
-        "Full": "Computer Systems Principles",
+        "Class": "Computer Systems Principles",
+        "Requirement": "Computer Science",
+        "Full": "COMPSCI 230: Computer Systems Principles",
         "Desc": "TBA"
     },
     {
-        "Class": "COMPSCI 240",
-        "Grade": "B-",
-        "Credits": 4.00,
-        "Full": "Reasoning Under Uncertainty",
+        "Class": "Reasoning Under Uncertainty",
+        "Requirement": "Computer Science",
+        "Full": "COMPSCI 240: Reasoning Under Uncertainty",
         "Desc": "TBA"
     },
     {
-        "Class": "HONORS 201H",
-        "Grade": "A",
-        "Credits": 4.00,
-        "Full": "Ideas That Change the World",
+        "Class": "Ideas That Change the World (HONORS)",
+        "Requirement": "Honors, Social World (SW), Diversity (DU)",
+        "Full": "HONORS 201H: Ideas That Change the World",
         "Desc": "TBA"
     },
     {
-        "Class": "MATH 233",
-        "Grade": "A-",
-        "Credits": 3.00,
-        "Full": "Multivariate Calculus",
+        "Class": "Multivariate Calculus",
+        "Requirement": "CS: Math Req",
+        "Full": "MATH 233: Multivariate Calculus",
         "Desc": "TBA"
     },
     {
-        "Class": "SPANISH 120",
-        "Grade": "A",
-        "Credits": 3.00,
-        "Full": "Spanish II",
+        "Class": "Spanish II",
+        "Requirement": "-",
+        "Full": "SPANISH 120: Spanish II",
         "Desc": "TBA"
     }
 ]

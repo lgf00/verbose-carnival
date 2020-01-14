@@ -1,37 +1,32 @@
 [
     {
-        "Class": "CICS 256",
-        "Grade": "A-",
-        "Credits": 4.00,
-        "Full": "Make: Physical Computing",
+        "Class": "Make: Physical Computing",
+        "Requirement": "CS: Lab Science",
+        "Full": "CICS 256: Make: Physical Computing",
         "Desc": "TBA"
     },
     {
-        "Class": "COMPSCI 220",
-        "Grade": "A",
-        "Credits": 4.00,
-        "Full": "Programming Methodology",
+        "Class": "Programming Methodology",
+        "Requirement": "Computer Science",
+        "Full": "COMPSCI 220: Programming Methodology",
         "Desc": "TBA"
     },
     {
-        "Class": "COMPSCI 250",
-        "Grade": "B+",
-        "Credits": 4.00,
-        "Full": "Introduction to Computation",
+        "Class": "Introduction to Computation",
+        "Requirement": "Computer Science",
+        "Full": "COMPSCI 250: Introduction to Computation",
         "Desc": "TBA"
     },
     {
-        "Class": "NRC 120",
-        "Grade": "A",
-        "Credits": 2.00,
-        "Full": "Basic Scuba",
+        "Class": "Basic Scuba",
+        "Requirement": "-",
+        "Full": "NRC 120: Basic Scuba",
         "Desc": "TBA"
     },
     {
-        "Class": "POLISCI 101",
-        "Grade": "B+",
-        "Credits": 4.00,
-        "Full": "American Politics",
+        "Class": "American Politics",
+        "Requirement": "Social & Behavioral Science (SB)",
+        "Full": "POLISCI 101: American Politics",
         "Desc": "TBA"
     }
 ]

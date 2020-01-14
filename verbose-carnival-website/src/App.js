@@ -12,9 +12,9 @@ import VerboseCarnival from './pages/Projects/Verbose-Carnival';
 function App() {
   return (
     <Layout>
-        <Route exact path="/" component = { Home } />
+        <Route exact path="/" component = { Home } name= "Home" />
         <Route exact path="/projects" component = { Projects } />
-        <Route exact path="/college" component = { College } />
+        <Route exact path="/college" component = { College } title={"College"}/>
         <Route exact path="/projects/schedular" component = { Schedular } />
         <Route exact path="/projects/scuba" component = { Scuba } />
         <Route exact path="/projects/travel" component = { Travel } />
