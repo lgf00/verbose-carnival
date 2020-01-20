@@ -3,7 +3,7 @@ import React from 'react'
 function Scuba(){
     return(
         <div>
-            <h1> PROJECTS/SCUBA </h1>
+            <h1> TBA </h1>
         </div>
     );
 }

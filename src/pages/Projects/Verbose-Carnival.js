@@ -3,7 +3,7 @@ import React from 'react'
 function VerboseCarnival(){
     return(
         <div>
-            <h1> PROJECTS/VERBOSE-CARNIVAL </h1>
+            <h1> TBA </h1>
         </div>
     );
 }

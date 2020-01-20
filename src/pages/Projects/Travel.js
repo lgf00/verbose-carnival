@@ -3,7 +3,7 @@ import React from 'react'
 function Travel(){
     return(
         <div>
-            <h1> PROJECTS/TRAVEL </h1>
+            <h1> TBA </h1>
         </div>
     );
 }

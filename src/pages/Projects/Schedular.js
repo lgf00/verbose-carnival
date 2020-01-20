@@ -3,7 +3,7 @@ import React from 'react'
 function Schedular(){
     return(
         <div>
-            <h1> PROJECTS/SCHEDULAR </h1>
+            <h1> TBA </h1>
         </div>
     );
 }
