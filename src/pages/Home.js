@@ -1,6 +1,7 @@
 import React from 'react'
 import { makeStyles, Grid, CssBaseline, Typography, Link, Button, Card, CardContent, Tooltip, CardActions, CardMedia } from '@material-ui/core'
 import PropTypes from 'prop-types';
+import { Link as RouterLink } from 'react-router-dom';
 import full from '../images/full.jpg'
 import meow from '../images/meowmeow.jpg'
 import minitt from '../images/minitt.jpg'
@@ -15,6 +16,27 @@ Project.propTypes = {
     codeLink: PropTypes.string.isRequired,
     content: PropTypes.string.isRequired,
 };
+
+ButtonLink.propTypes = {
+    primary: PropTypes.string.isRequired,
+    to: PropTypes.string.isRequired,
+};
+
+function ButtonLink(props) {
+    const { primary, to } = props;
+    const classes = useStyles();
+
+    const renderLink = React.useMemo(
+        () => React.forwardRef((itemProps, ref) => <RouterLink to={to} ref={ref} {...itemProps} />),
+        [to],
+    );
+
+    return (
+            <Button size="large" color="secondary" component={renderLink} className={classes.button}>
+                {primary}
+            </Button>
+    );
+}
 
 function Project(props) {
     const { title, img, moreLink, liveLink, codeLink, content } = props;
@@ -206,9 +228,10 @@ function Home() {
                 <Grid item xs={12} sm={12} md={12} lg={6} xl={6}>
                     <Typography variant="h2">College</Typography>
                     <Typography variant="h5" className={classes.subText}>a second year <strong>honors</strong> student pursing a <strong>BS in Computer Science</strong> at the University of Massachusetts Amherst, treasurer of <strong>KDC</strong> and member of <strong>DSC</strong></Typography>
-                    <Button size="large" color="secondary" href="/college" className={classes.button}>
+                    {/* <Button size="large" color="secondary" href="/college" className={classes.button}>
                         find out more
-                    </Button>
+                    </Button> */}
+                    <ButtonLink to="/college" primary="find out more"/>
                 </Grid>
                 <Grid item xs={12} lg={6}>
                     <img src={rocky} alt="me" className={classes.img}></img>

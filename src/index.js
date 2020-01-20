@@ -4,6 +4,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from 'react-router-dom';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core'
+import ScrollToTop from './ScrollToTop';
 
 const theme = createMuiTheme({
     palette: {
@@ -14,7 +15,8 @@ const theme = createMuiTheme({
 ReactDOM.render(
     <MuiThemeProvider theme={theme}>
         <BrowserRouter>
-            <App />
+            <ScrollToTop/>
+            <App/>
         </BrowserRouter>
     </MuiThemeProvider>,
     document.getElementById('root'));
