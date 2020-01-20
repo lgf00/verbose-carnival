@@ -206,7 +206,7 @@ function Home() {
                 <Grid item xs={12} sm={12} md={12} lg={6} xl={6}>
                     <Typography variant="h2">College</Typography>
                     <Typography variant="h5" className={classes.subText}>a second year <strong>honors</strong> student pursing a <strong>BS in Computer Science</strong> at the University of Massachusetts Amherst, treasurer of <strong>KDC</strong> and member of <strong>DSC</strong></Typography>
-                    <Button size="large" color="secondary" href="/college" className={classes.button}>
+                    <Button size="large" color="secondary" href="lucasguzmanfinn.com/college" className={classes.button}>
                         find out more
                     </Button>
                 </Grid>
