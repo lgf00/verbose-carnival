@@ -3,7 +3,6 @@ import { makeStyles, Grid, CssBaseline, Typography, Link, Button, Card, CardCont
 import PropTypes from 'prop-types';
 import { Link as RouterLink } from 'react-router-dom';
 import full from '../images/full.jpg'
-import meow from '../images/meowmeow.jpg'
 import minitt from '../images/minitt.jpg'
 import rocky from '../images/rocky.jpg'
 import resume from '../resources/Resume - Lucas Guzman-Finn.pdf'
@@ -41,6 +40,19 @@ function ButtonLink(props) {
 function Project(props) {
     const { title, img, moreLink, liveLink, codeLink, content } = props;
     const classes = useStyles();
+    let moreIsActive = false;
+    let liveIsActive = false;
+    let codeIsActive = false;
+    if (moreLink === "") {
+        moreIsActive = true;
+    }
+    if (liveLink === "") {
+        liveIsActive = true;
+    }
+    if (codeLink === "") {
+        codeIsActive = true;
+    }
+
     return (
         <Grid item xs={12} sm={6} md={4} lg={3} xl={2} component={Card} className={classes.projCard}>
             <CardMedia
@@ -57,9 +69,9 @@ function Project(props) {
                 </Typography>
             </CardContent>
             <CardActions className={classes.projCardAct}>
-                <Button size="small" color="secondary" href={moreLink}> More </Button>
-                <Button size="small" color="secondary" href={liveLink}> Live </Button>
-                <Button size="small" color="secondary" href={codeLink}> Code </Button>
+                <Button size="small" color="secondary" href={moreLink} disabled={moreIsActive}> More </Button>
+                <Button size="small" color="secondary" href={liveLink} disabled={liveIsActive}> Live </Button>
+                <Button size="small" color="secondary" href={codeLink} disabled={codeIsActive}> Code </Button>
             </CardActions>
         </Grid>
     );
@@ -228,9 +240,6 @@ function Home() {
                 <Grid item xs={12} sm={12} md={12} lg={6} xl={6}>
                     <Typography variant="h2">College</Typography>
                     <Typography variant="h5" className={classes.subText}>a second year <strong>honors</strong> student pursing a <strong>BS in Computer Science</strong> at the University of Massachusetts Amherst, treasurer of <strong>KDC</strong> and member of <strong>DSC</strong></Typography>
-                    {/* <Button size="large" color="secondary" href="/college" className={classes.button}>
-                        find out more
-                    </Button> */}
                     <ButtonLink to="/college" primary="find out more"/>
                 </Grid>
                 <Grid item xs={12} lg={6}>
@@ -243,10 +252,7 @@ function Home() {
                     <Typography variant="h5" className={classes.subText}>some personal projects that have been worked on and off on spare time, some
                     bassed off of what I am passionate about, others for convenience</Typography>
                 </Grid>
-                <Project title="Scuba" img={full} content="Online log book to help me track my dives" moreLink="/projects/scuba" liveLink="/live" codeLink="code" />
-                <Project title="Travel" img={meow} content="App to keep track of the places I've been and the photos I've taken" moreLink="/projects/travel" liveLink="/live" codeLink="code" />
-                <Project title="Schedular" img={minitt} content="Easy and customizable way for me to add my school schedule to my google calandar" moreLink="/projects/schedular" liveLink="/live" codeLink="code" />
-                <Project title="Website" img={minitt} content="This... right here.. what you're looking at!" moreLink="/projects/verbose-carnival" liveLink="/live" codeLink="code" />
+                <Project title="Website" img={minitt} content="This... right here.. what you're looking at!" moreLink="" liveLink="" codeLink="https://github.com/lgf00/verbose-carnival" />
             </Grid>
             <Grid container direction="row" justify="center" alignItems="center" spacing={4} className={classes.foot}>
                 <Grid item xs={12}>

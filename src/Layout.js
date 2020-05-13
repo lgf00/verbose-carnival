@@ -88,6 +88,7 @@ function HideOnScroll(props) {
     );
 }
 
+// janky solution that breaks should find better
 function getPageName() {
     let path = window.location.pathname;
     switch (path) {
@@ -123,11 +124,11 @@ function Layout(props) {
                 <ListItemLink to="/" primary="Home" />
                 <ListItemLink to="/college" primary="College" />
                 <Divider />
-                <ListSubheader>Projects</ListSubheader>
-                <ListItemLink to="/projects/scuba" primary="Scuba" />
+                <ListSubheader>Projects (TBA)</ListSubheader>
+                {/*<ListItemLink to="/projects/scuba" primary="Scuba" />
                 <ListItemLink to="/projects/travel" primary="Travel" />
                 <ListItemLink to="/projects/schedular" primary="Schedular" />
-                <ListItemLink to="/projects/verbose-carnival" primary="Verbose-Carnival" />
+                <ListItemLink to="/projects/verbose-carnival" primary="Verbose-Carnival" />*/}
             </List>
         </div>
     );
